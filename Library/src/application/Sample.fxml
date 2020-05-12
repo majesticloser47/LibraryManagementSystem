@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="738.0" style="-fx-background-color: transparent; -fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <AnchorPane fx:id="mainPane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: green;">
+         <children>
+            <ImageView fx:id="close" fitHeight="14.0" fitWidth="18.0" layoutX="718.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="39.0" layoutY="94.0" prefHeight="259.0" prefWidth="664.0" text="WELCOME TO LIBRARY MANAGEMENT SYSTEM" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Georgia" size="56.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutY="466.0" prefHeight="159.0" prefWidth="738.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fx:id="adduser" fitHeight="60.0" fitWidth="60.0" layoutX="35.0" layoutY="40.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+               <image>
+                  <Image url="@../images/add_member_15178.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="addbook" fitHeight="60.0" fitWidth="60.0" layoutX="141.0" layoutY="40.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/add-book-more-plus-choice-512.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="showmem" fitHeight="60.0" fitWidth="60.0" layoutX="235.0" layoutY="40.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/52928.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="showbooks" fitHeight="60.0" fitWidth="60.0" layoutX="329.0" layoutY="40.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/book-png-image-54344.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="about" fitHeight="60.0" fitWidth="60.0" layoutX="645.0" layoutY="40.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user-png-icon-male-user-icon-512.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="104.0" prefHeight="30.0" prefWidth="80.0" text="Add User" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="131.0" layoutY="104.0" prefHeight="30.0" prefWidth="80.0" text="Add Book" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="225.0" layoutY="105.0" prefHeight="37.0" prefWidth="80.0" text="Show Members" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+            <Label alignment="CENTER" layoutX="319.0" layoutY="108.0" prefHeight="30.0" prefWidth="80.0" text="Show Books" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="635.0" layoutY="108.0" prefHeight="30.0" prefWidth="80.0" text="About Us" textFill="WHITE" />
+            <ImageView fx:id="borrow" fitHeight="60.0" fitWidth="60.0" layoutX="431.0" layoutY="40.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/borrow-icon-27.jpg" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="ret" fitHeight="60.0" fitWidth="60.0" layoutX="539.0" layoutY="48.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_353649.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="421.0" layoutY="108.0" prefHeight="30.0" prefWidth="80.0" text="Borrow Book" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="529.0" layoutY="108.0" prefHeight="30.0" prefWidth="80.0" text="Return Book" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="adduserpane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: #5900ff;" visible="false">
+         <children>
+            <ImageView fx:id="closeadduser" fitHeight="14.0" fitWidth="18.0" layoutX="717.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="24.0" prefHeight="66.0" prefWidth="689.0" text="ADD USER" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="147.0" prefHeight="17.0" prefWidth="88.0" text="First Name:" textFill="WHITE" />
+            <TextField fx:id="aut1" layoutX="151.0" layoutY="133.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="400.0" layoutY="137.0" prefHeight="17.0" prefWidth="71.0" text="Last Name:" textFill="WHITE" />
+            <TextField fx:id="aut2" layoutX="491.0" layoutY="133.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="400.0" layoutY="187.0" prefHeight="17.0" prefWidth="88.0" text="Enter new ID:" textFill="WHITE" />
+            <TextField fx:id="aut4" layoutX="491.0" layoutY="183.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="60.0" layoutY="187.0" prefHeight="17.0" prefWidth="88.0" text="Total members:" textFill="WHITE" />
+            <TextField fx:id="aut3" layoutX="151.0" layoutY="184.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="60.0" layoutY="236.0" prefHeight="17.0" prefWidth="88.0" text="Age:" textFill="WHITE" />
+            <TextField fx:id="aut5" layoutX="151.0" layoutY="232.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="400.0" layoutY="236.0" prefHeight="17.0" prefWidth="88.0" text="User Type:" textFill="WHITE" />
+            <ComboBox fx:id="usertype" layoutX="491.0" layoutY="232.0" prefHeight="25.0" prefWidth="194.0" />
+            <Button fx:id="addusersubmit" layoutX="122.0" layoutY="299.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="44.0" prefWidth="171.0" text="Submit" />
+            <Button fx:id="adduserreset" layoutX="432.0" layoutY="299.0" mnemonicParsing="false" onMousePressed="#initializeAddUser" prefHeight="44.0" prefWidth="171.0" text="Reset" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addbookpane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: #00fff7;" visible="false">
+         <children>
+            <ImageView fx:id="closeaddbook" fitHeight="14.0" fitWidth="18.0" layoutX="717.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="21.0" prefHeight="66.0" prefWidth="689.0" text="ADD BOOK" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="134.0" prefHeight="17.0" prefWidth="88.0" text="Title:" />
+            <TextField fx:id="aub1" layoutX="164.0" layoutY="130.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="399.0" layoutY="134.0" prefHeight="17.0" prefWidth="71.0" text="ISBN:" />
+            <TextField fx:id="aub2" layoutX="488.0" layoutY="130.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="390.0" layoutY="187.0" prefHeight="17.0" prefWidth="88.0" text="Author Name:" />
+            <TextField fx:id="aub4" layoutX="488.0" layoutY="183.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="53.0" layoutY="187.0" prefHeight="17.0" prefWidth="88.0" text="Genre:" />
+            <TextField fx:id="aub3" layoutX="164.0" layoutY="183.0" prefHeight="25.0" prefWidth="194.0" />
+            <Label layoutX="53.0" layoutY="247.0" prefHeight="17.0" prefWidth="88.0" text="Publisher Code:" />
+            <TextField fx:id="aub5" layoutX="164.0" layoutY="243.0" prefHeight="25.0" prefWidth="194.0" />
+            <Button fx:id="addbooksubmit" layoutX="127.0" layoutY="345.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="44.0" prefWidth="171.0" text="Submit" />
+            <Button fx:id="addbookreset" layoutX="424.0" layoutY="345.0" mnemonicParsing="false" onMousePressed="#initializeAddUser" prefHeight="44.0" prefWidth="171.0" text="Reset" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="showmemberspane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: #5900ff;" visible="false">
+         <children>
+            <ImageView fx:id="closeshowmem" fitHeight="14.0" fitWidth="18.0" layoutX="717.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="15.0" layoutY="14.0" prefHeight="72.0" prefWidth="689.0" text="MEMBERS LIST" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="48.0" />
+               </font>
+            </Label>
+            <TableView fx:id="memtable" layoutX="95.0" layoutY="121.0" prefHeight="259.0" prefWidth="551.0">
+              <columns>
+                <TableColumn fx:id="memidCol" prefWidth="75.0" text="Member ID" />
+                <TableColumn fx:id="firstnameCol" prefWidth="149.0" text="First Name" />
+                  <TableColumn fx:id="lastnameCol" prefWidth="154.0" text="Last Name" />
+                  <TableColumn fx:id="ageCol" prefWidth="74.0" text="Age" />
+                  <TableColumn fx:id="typeCol" prefWidth="98.0" text="Member type" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchmember" layoutX="258.0" layoutY="86.0" onKeyTyped="#SearchMember" prefHeight="25.0" prefWidth="270.0" />
+            <ComboBox fx:id="searchtype" layoutX="95.0" layoutY="86.0" prefWidth="150.0" />
+            <Label layoutX="15.0" layoutY="82.0" prefHeight="30.0" prefWidth="80.0" text="Search for:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="deleteuser" layoutX="95.0" layoutY="397.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="37.0" prefWidth="112.0" text="Delete Entry" />
+            <Button fx:id="search" layoutX="541.0" layoutY="86.0" mnemonicParsing="false" onMousePressed="#SearchMember" prefHeight="25.0" prefWidth="106.0" text="Search" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="showbookspane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: #00fff7;" visible="false">
+         <children>
+            <ImageView fx:id="closeshowbooks" fitHeight="14.0" fitWidth="18.0" layoutX="717.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="13.0" layoutY="18.0" prefHeight="72.0" prefWidth="708.0" text="BOOKS LIST" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="48.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="booksearchtype" layoutX="68.0" layoutY="100.0" prefWidth="150.0" />
+            <TextField fx:id="booksearch" layoutX="241.0" layoutY="100.0" onKeyTyped="#SearchBook" prefHeight="25.0" prefWidth="423.0" />
+            <TableView fx:id="booktable" layoutX="18.0" layoutY="138.0" prefHeight="241.0" prefWidth="689.0">
+              <columns>
+                <TableColumn fx:id="isbnCol" prefWidth="68.0" text="ISBN" />
+                <TableColumn fx:id="titleCol" prefWidth="217.0" text="Title" />
+                  <TableColumn fx:id="genreCol" prefWidth="126.0" text="Genre" />
+                  <TableColumn fx:id="autCol" prefWidth="108.0" text="Author" />
+                  <TableColumn fx:id="pubcodeCol" prefWidth="95.0" text="Publisher Code" />
+                  <TableColumn fx:id="statCol" prefWidth="75.0" text="Status" />
+              </columns>
+            </TableView>
+            <Button fx:id="deletebook" layoutX="444.0" layoutY="396.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="37.0" prefWidth="150.0" text="Delete book" />
+            <Button fx:id="displaybookdetails" layoutX="84.0" layoutY="396.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="37.0" prefWidth="150.0" text="Display Selected Details" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="borrowpane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: #2fff00;" visible="false">
+         <children>
+            <ImageView fx:id="closeborrow" fitHeight="14.0" fitWidth="18.0" layoutX="717.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="13.0" layoutY="18.0" prefHeight="72.0" prefWidth="708.0" text="BORROW BOOK" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="159.0" prefHeight="17.0" prefWidth="60.0" text="ISBN:" />
+            <TextField fx:id="borrowisbn" layoutX="127.0" layoutY="155.0" />
+            <Label layoutX="348.0" layoutY="159.0" prefHeight="17.0" prefWidth="119.0" text="Issuing Member ID:" />
+            <TextField fx:id="borrowmemid" layoutX="467.0" layoutY="155.0" />
+            <Button fx:id="borrowsubmit" layoutX="189.0" layoutY="268.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="44.0" prefWidth="112.0" text="Borrow" />
+            <Button fx:id="borrowreset" layoutX="390.0" layoutY="268.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="44.0" prefWidth="112.0" text="Reset" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="finepane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: #ff0000;" visible="false">
+         <children>
+            <ImageView fx:id="closefine" fitHeight="14.0" fitWidth="18.0" layoutX="717.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="aboutpane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: #bf5000;" visible="false">
+         <children>
+            <ImageView fx:id="closeabout" fitHeight="14.0" fitWidth="18.0" layoutX="717.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="159.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/9376f4bc2cf659688e4fe9887adddc4a.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="159.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/20-512.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="292.0" layoutY="137.0" prefHeight="17.0" prefWidth="329.0" text="Abhay P. Nambiar (U4CSE18001)" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label layoutX="292.0" layoutY="273.0" prefHeight="17.0" prefWidth="329.0" text="Darsith V K (U4CSE18014)" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="21.0" prefHeight="72.0" prefWidth="617.0" text="MADE BY" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="detailspane" prefHeight="385.0" prefWidth="626.0" style="-fx-background-color: #62ff00;" visible="false">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <ImageView fx:id="closedetails" fitHeight="14.0" fitWidth="18.0" layoutX="605.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <TextArea fx:id="details" layoutX="20.0" layoutY="33.0" prefHeight="329.0" prefWidth="585.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="retpane" prefHeight="450.0" prefWidth="738.0" style="-fx-background-color: #0026ff;" visible="false">
+         <children>
+            <ImageView fx:id="closeret" fitHeight="14.0" fitWidth="18.0" layoutX="717.0" layoutY="7.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_342859.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="13.0" layoutY="18.0" prefHeight="72.0" prefWidth="708.0" text="RETURN BOOK" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="151.0" prefHeight="35.0" prefWidth="310.0" text="ISBN of book to be returned:" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="returnisbn" layoutX="369.0" layoutY="151.0" prefHeight="14.0" prefWidth="302.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="returnsubmit" layoutX="109.0" layoutY="281.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="44.0" prefWidth="194.0" text="Return">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="returnreset" layoutX="429.0" layoutY="281.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="44.0" prefWidth="194.0" text="Reset">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
